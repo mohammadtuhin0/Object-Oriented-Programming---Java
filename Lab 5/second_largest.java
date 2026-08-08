@@ -7,7 +7,6 @@ public class second_largest {
         System.out.println("Enter the element size: ");
         int n = sc.nextInt();
 
-        int temp = 0;
         int[] num = new int[n];
         System.out.println("Enter the elements: ");
         for(int i = 0; i<n; i++){
