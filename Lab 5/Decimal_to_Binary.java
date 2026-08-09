@@ -6,8 +6,16 @@ public class Decimal_to_Binary {
 
         System.out.println("Enter the Decimal Number: ");
         int num = sc.nextInt();
+        String binary = "";
 
-        String binaryString = Integer.toBinaryString(num);
-        System.out.println(binaryString);
+        while(num > 0){
+            int remainder = num % 2;
+            binary = remainder + binary;
+            num = num / 2;
+        }
+        System.out.println(binary);
+
+        // String binaryString = Integer.toBinaryString(num);
+        // System.out.println(binaryString);
     }
 }
