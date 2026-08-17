@@ -4,6 +4,7 @@ public class AssignmentTester {
         Assignment as1 = new Assignment();
         as1.printDetails();
 
+        
         System.out.println("===== 1 =====");
 
         as1.task = 11;
