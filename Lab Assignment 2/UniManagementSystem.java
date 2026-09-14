@@ -3,7 +3,7 @@ abstract class Person{
     private String id;
     private String email;
 
-    Person(String name, String id, String email){
+    public Person(String name, String id, String email){
         this.name = name;
         this.id = id;
         this.email = email;
@@ -74,7 +74,7 @@ class Student extends Person{
     }
     // method overloading
     public void displayDetails(String format) {
-        if(format.equalsIgnoreCase("Short")) {
+        if(format.equalsIgnoreCase("short")) {
             System.out.println("Name : " + getName());
             System.out.println("ID : " + getId());
         } else if(format.equalsIgnoreCase("full")){
@@ -85,6 +85,10 @@ class Student extends Person{
     }
 }
 // 3. Teacher Class
+
+interface Payable{
+    double calculatePayment();
+}
 
 class Teacher extends Person implements Payable{
     private String designation;
@@ -109,10 +113,6 @@ class Teacher extends Person implements Payable{
     public double calculatePayment() {
         return  salary;
     }
-}
-
-interface Payable{
-    double calculatePayment();
 }
 
 
